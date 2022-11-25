@@ -6,4 +6,4 @@ function Book(title, author, pages, read) {
     return `${title} by ${author}, ${pages} pages, ${read}`;
 }
 
-const book = new Book("The Hobbit", "J.R.R Tolkien", 295, "not read yet");
+const books = new Book("The Hobbit", "J.R.R Tolkien", 295, "not read yet");
