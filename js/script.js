@@ -1,9 +1,49 @@
-function Book(title, author, pages, read) {
+let myLibrary = [
+    {
+        name: "The Hobbit",
+        author: "J. R. R. Tolkien",
+        pages: 300,
+    },
+    {
+        name: "Lord of the Rings",
+        author: "J. R. R. Tolkien",
+        pages: 350,
+    },
+    {
+        name: "Harry Potter",
+        author: "J. K. Rowling",
+        pages: 250,
+    },
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* constructor
+function Book(title, author, pages) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;
-    return `${title} by ${author}, ${pages} pages, ${read}`;
-}
+    this.info = function() {
+        return `${title} by ${author}, ${pages} pages`;
+    }
+};
 
-const books = new Book("The Hobbit", "J.R.R Tolkien", 295, "not read yet");
+const books = new Book("The Hobbit", "J.R.R Tolkien", 295);
+
+*/
