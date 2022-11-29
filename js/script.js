@@ -16,24 +16,38 @@ let myLibrary = [
     },
 ];
 
-function displayBooks() { // function for displaying the content of myLibrary Array
-    for(let index = 0; index < myLibrary.length; index++){
-        for(key in myLibrary[index]){
-            console.log(`${key} : ${myLibrary[index][key]}`);
-            //console.log(key + " : " + myLibrary[index][key]);
-        }
+function createCard() { // this function creates div for each book stored in myLibrary Array
+    for(index = 0; index < myLibrary.length; index++){
+        const libraryDisplay = document.querySelector('.main-library');
+        const cardDiv = document.createElement('div')
+        cardDiv.classList.add('book-card');
+
+        const cardTitle = document.createElement('div');
+        cardTitle.classList.add('title', 'card-info');
+        console.log(myLibrary[index]['title'])
+
+        cardTitle.textContent = `${myLibrary[index]['title']}`
+        cardDiv.appendChild(cardTitle);
+
+        const cardAuthor = document.createElement('div');
+        cardAuthor.classList.add('author', 'card-info');
+        console.log(myLibrary[index]['author'])
+
+        cardAuthor.textContent = `${myLibrary[index]['author']}`
+        cardDiv.appendChild(cardAuthor);
+
+        const cardPages = document.createElement('div');
+        cardPages.classList.add('pages', 'card-info');
+        console.log(myLibrary[index]['pages'])
+
+        cardPages.textContent = `${myLibrary[index]['pages']}`;
+        cardDiv.appendChild(cardPages);
+
+        libraryDisplay.appendChild(cardDiv);
     }
 }
 
-function displayBooksTest() {
-    const divTitle = document.querySelector('.title');
-    const divAuthor = document.querySelector('.author');
-    const divPages = document.querySelector('.pages');
-        divTitle.textContent = `Title : ${myLibrary[0]["title"]}`;
-        divAuthor.textContent = `Author : ${myLibrary[0]["author"]}`;
-        divPages.textContent = `Pages : ${myLibrary[0]["pages"]}`;
-}
-
+createCard();
 
 
 
