@@ -1,16 +1,16 @@
 let myLibrary = [
     {
-        name: "The Hobbit",
+        title: "The Hobbit",
         author: "J. R. R. Tolkien",
         pages: 300,
     },
     {
-        name: "Lord of the Rings",
+        title: "Lord of the Rings",
         author: "J. R. R. Tolkien",
         pages: 350,
     },
     {
-        name: "Harry Potter",
+        title: "Harry Potter",
         author: "J. K. Rowling",
         pages: 250,
     },
@@ -25,7 +25,14 @@ function displayBooks() { // function for displaying the content of myLibrary Ar
     }
 }
 
-
+function displayBooksTest() {
+    const divTitle = document.querySelector('.title');
+    const divAuthor = document.querySelector('.author');
+    const divPages = document.querySelector('.pages');
+        divTitle.textContent = `Title : ${myLibrary[0]["title"]}`;
+        divAuthor.textContent = `Author : ${myLibrary[0]["author"]}`;
+        divPages.textContent = `Pages : ${myLibrary[0]["pages"]}`;
+}
 
 
 
