@@ -69,7 +69,7 @@ bookDetails.addEventListener("submit", async (ev) => {
         pages: bookPages,
     })
 
-    console.log(myLibrary);
+    bookDetails.reset();
 
     clearCards();
     createCard();
