@@ -1,20 +1,4 @@
-let myLibrary = [
-    {
-        title: "The Hobbit",
-        author: "J. R. R. Tolkien",
-        pages: 300,
-    },
-    {
-        title: "Lord of the Rings",
-        author: "J. R. R. Tolkien",
-        pages: 350,
-    },
-    {
-        title: "Harry Potter",
-        author: "J. K. Rowling",
-        pages: 250,
-    },
-];
+let myLibrary = [];
 
 function createCard() { // this function creates div for each book stored in myLibrary Array
     for(index = 0; index < myLibrary.length; index++){
