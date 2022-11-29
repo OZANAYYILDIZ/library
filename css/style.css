@@ -9,10 +9,21 @@ body {
     color: #444;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
 .side-bar {
     background-color: aqua;
     width: 300px;
     height: 100vh;
+}
+
+.main-library {
+    width: 100%;
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(240px, 1fr));
 }
 
 .form-container {
@@ -55,4 +66,18 @@ body {
 
 .test {
     text-align: center;
+}
+
+.book-card {
+    margin: 8px auto;
+    background-color: #fff;
+    width: 90%;
+    height: 150px;
+    display: grid;
+}
+
+.card-info {
+    padding-top: 8px;
+    padding-left: 8px;
+    border-bottom: solid 1px #ddd;
 }

@@ -11,28 +11,38 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="side-bar">
-        <div class="form-container">
-            <form action="#">
-                <div class="test">
-                    <div class="input-con">
-                        <label for="title">Title :</label>
-                        <input class="inputs" type="text" name="title" id="title">
+    <div class="container">
+        <div class="side-bar">
+            <div class="form-container">
+                <form action="#">
+                    <div class="test">
+                        <div class="input-con">
+                            <label for="title">Title :</label>
+                            <input class="inputs" type="text" name="title" id="title">
+                        </div>
+                        <div class="input-con">
+                            <label for="author">Author :</label>
+                            <input class="inputs" type="text" name="author" id="author">
+                        </div>
+                        <div class="input-con">
+                            <label for="pages">Pages :</label>
+                            <input class="inputs" type="number" name="pages" id="pages">
+                        </div>
+                        <button class="button" type="submit">Add Book</button>
                     </div>
-                    <div class="input-con">
-                        <label for="author">Author :</label>
-                        <input class="inputs" type="text" name="author" id="author">
-                    </div>
-                    <div class="input-con">
-                        <label for="pages">Pages :</label>
-                        <input class="inputs" type="number" name="pages" id="pages">
-                    </div>
-                    <button class="button" type="submit">Add Book</button>
-                </div>
-
-            </form>
+    
+                </form>
+            </div>
+        </div>
+        <div class="main-library">
+            <div class="book-card">
+                <div class="title card-info">place holder</div>
+                <div class="author card-info">place holder</div>
+                <div class="pages card-info">place holder</div>
+            </div>
         </div>
     </div>
+
 
 
     <script src="js/script.js"></script>
