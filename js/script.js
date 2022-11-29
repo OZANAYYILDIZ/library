@@ -24,21 +24,18 @@ function createCard() { // this function creates div for each book stored in myL
 
         const cardTitle = document.createElement('div');
         cardTitle.classList.add('title', 'card-info');
-        console.log(myLibrary[index]['title'])
 
         cardTitle.textContent = `${myLibrary[index]['title']}`
         cardDiv.appendChild(cardTitle);
 
         const cardAuthor = document.createElement('div');
         cardAuthor.classList.add('author', 'card-info');
-        console.log(myLibrary[index]['author'])
 
         cardAuthor.textContent = `${myLibrary[index]['author']}`
         cardDiv.appendChild(cardAuthor);
 
         const cardPages = document.createElement('div');
         cardPages.classList.add('pages', 'card-info');
-        console.log(myLibrary[index]['pages'])
 
         cardPages.textContent = `${myLibrary[index]['pages']}`;
         cardDiv.appendChild(cardPages);
@@ -47,7 +44,37 @@ function createCard() { // this function creates div for each book stored in myL
     }
 }
 
-createCard();
+function clearCards() { // clears all array items from the DOM
+    const libraryDisplay = document.querySelector('.main-library');
+    while(libraryDisplay.firstChild) {
+        libraryDisplay.removeChild(libraryDisplay.lastChild);
+    }
+}
+
+const bookDetails = document.getElementById("book-details");
+bookDetails.addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    let bookTitle = document.querySelector('#title').value;
+    let bookAuthor = document.querySelector('#author').value;
+    let bookPages = document.querySelector('#pages').value;
+
+    console.log(
+        "book title: " + bookTitle + 
+        " book author: " + bookAuthor + 
+        " book pages: " + bookPages)
+
+    myLibrary.push({
+        title: bookTitle,
+        author: bookAuthor,
+        pages: bookPages,
+    })
+
+    console.log(myLibrary);
+
+    clearCards();
+    createCard();
+
+})
 
 
 
