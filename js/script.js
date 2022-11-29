@@ -34,7 +34,7 @@ let myLibrary = [
 
 
 
-/* constructor
+/* constructor object konusundan kalma
 function Book(title, author, pages) {
     this.title = title;
     this.author = author;
