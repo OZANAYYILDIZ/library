@@ -16,7 +16,14 @@ let myLibrary = [
     },
 ];
 
-
+function displayBooks() { // function for displaying the content of myLibrary Array
+    for(let index = 0; index < myLibrary.length; index++){
+        for(key in myLibrary[index]){
+            console.log(`${key} : ${myLibrary[index][key]}`);
+            //console.log(key + " : " + myLibrary[index][key]);
+        }
+    }
+}
 
 
 
