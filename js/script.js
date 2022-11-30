@@ -24,6 +24,13 @@ function createCard() { // this function creates div for each book stored in myL
         cardPages.textContent = `${myLibrary[index]['pages']}`;
         cardDiv.appendChild(cardPages);
 
+        const cardDeleteBtn = document.createElement('div');
+        cardDeleteBtn.classList.add('card-btn', 'delete-btn');
+        const btnIcon = document.createElement('i');
+        btnIcon.classList.add('fa-solid', 'fa-trash');
+        cardDiv.appendChild(cardDeleteBtn);
+        cardDeleteBtn.appendChild(btnIcon);
+
         libraryDisplay.appendChild(cardDiv);
     }
 }
