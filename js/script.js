@@ -65,8 +65,7 @@ bookDetails.addEventListener("submit", async (ev) => {
     clearCards();
     createCard();
 
-})
-
+});
 
 
 
